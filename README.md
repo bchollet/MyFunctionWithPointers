@@ -29,8 +29,8 @@ Non seulement cette source m'a permi de développer mes connaissances sur le suj
 
 Puisque mon programme demande une entrée à l'utilisateur, il faut s'assurer de plusieurs chose:
 
-⋅⋅⋅* L'utilisateur entre un entier et __uniquement__ un entier.
-⋅⋅⋅* L'utilisateur entre un entier __positif__.
-⋅⋅⋅* L'utilisateur ne dépasse pas __la valeur extrême__ d'un entier.
+* L'utilisateur entre un entier et __uniquement__ un entier.
+* L'utilisateur entre un entier __positif__.
+* L'utilisateur ne dépasse pas __la valeur extrême__ d'un entier.
 
 Ces erreurs sont gérées dans la dernières version du programme. Par défaut, j'ai défini la valeur maximale comme étant égale à 1'000'000.
