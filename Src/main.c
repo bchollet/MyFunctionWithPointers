@@ -3,16 +3,17 @@
 
 void sliceMinutes (); //Déclaration de fonction
 
-int nbminutes = 0, nbhours = 0; //Déclaration de variables globales
-
 //L'utilisateur entre un nombre de minutes qui va ensuite être découpé en heure et en minutes restantes.
 //REMARQUE: Ce programme découpe correctement les minutes.Toutefois, l'utilisation de variable globales est peu recommandée, surtout dans des programmes comportant de nombreuses lignes de code
 int main()
 {
+    int nbhours = 0, nbminutes = 0;
+
     printf("Veuillez entrer un nombre de minutes: ");
     scanf("%i", &nbminutes);
 
-    sliceMinutes(nbhours, nbminutes);
+    nbhours = sliceMinutesToHours(nbhours, nbminutes);
+    nbminutes = sliceMinutesToMinutes(nbminutes);
 
     printf("%i heures et %i minutes", nbhours, nbminutes);
 
@@ -20,10 +21,18 @@ int main()
 }
 
 
-//Cette fonction va découper le nombre de minutes entré par l'utilisateur en heure et en minutes.
+//Cette fonction va découper le nombre de minutes entré par l'utilisateur en heure.
 //Dans l'état actuel, la fonction n'a plus de paramètres et se contente de modifier les variables globales.
-void sliceMinutes ()
+int sliceMinutesToHours (int hours, int minutes)
 {
-    nbhours = nbminutes / 60; // Exemple: 90/60 = 1 vu que nous utilisons des entiers.
-    nbminutes = nbminutes % 60; // Exemple: 90%60 = 30.
+    hours = minutes / 60; // Exemple: 90/60 = 1 vu que nous utilisons des entiers.
+
+    return hours;
+}
+
+int sliceMinutesToMinutes (int minutes)
+{
+    minutes = minutes % 60; // Exemple: 90%60 = 30.
+
+    return minutes;
 }
