@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#define UPPER_LIMIT 1000000
 
 void sliceMinutes (); //Déclaration de fonction
 
@@ -8,8 +9,13 @@ int main()
 {
     int minutes = 0, hours = 0;
 
-    printf("Veuillez entrer un nombre de minutes: ");
-    scanf("%i", &minutes);
+    do
+    {
+        printf("Veuillez entrer un nombre de minutes: ");
+        fflush(stdin);
+
+    } while ((scanf("%i", &minutes) != 1) || minutes > UPPER_LIMIT || minutes < 0); //Vérification que l'utilisateur entre un entier positif ne dépassant pas une certaine valeur
+
 
     sliceMinutes(&hours, &minutes); //On envoit dans la fonction la valeur des adresses des variables
 
