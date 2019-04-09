@@ -4,7 +4,6 @@
 void sliceMinutes (); //Déclaration de fonction
 
 //L'utilisateur entre un nombre de minutes qui va ensuite être découpé en heure et en minutes restantes.
-//REMARQUE: Ce programme découpe correctement les minutes.Toutefois, l'utilisation de variable globales est peu recommandée, surtout dans des programmes comportant de nombreuses lignes de code
 int main()
 {
     int nbhours = 0, nbminutes = 0;
@@ -22,7 +21,7 @@ int main()
 
 
 //Cette fonction va découper le nombre de minutes entré par l'utilisateur en heure.
-//Dans l'état actuel, la fonction n'a plus de paramètres et se contente de modifier les variables globales.
+//Retourne le nombre d'heure
 int sliceMinutesToHours (int hours, int minutes)
 {
     hours = minutes / 60; // Exemple: 90/60 = 1 vu que nous utilisons des entiers.
@@ -30,6 +29,8 @@ int sliceMinutesToHours (int hours, int minutes)
     return hours;
 }
 
+//Cette fonction va calculer le nombre de minutes restantes.
+//Retourne le nombre de minutes restantes
 int sliceMinutesToMinutes (int minutes)
 {
     minutes = minutes % 60; // Exemple: 90%60 = 30.
