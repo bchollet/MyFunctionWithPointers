@@ -25,6 +25,17 @@ Mais alors, quid des fonctions ? Je peux toujours contourner le problème des po
 Pour terminer, afin de me renseigner sur la définition des pointeurs, j'ai effectué des recherches sur google. Je suis ainsi tombé sur l'adresse suivante de "Open Classroom": https://bit.ly/2K31JVy.
 Non seulement cette source m'a permi de développer mes connaissances sur le sujet (définition, utilisation, etc...), mais elle m'a égalment mis à dispostion un exemple de code utilisant les pointeurs. Exemple dont je vais m'inspirer pour développer mon projet.
 
+## Implémentation
+
+Par mes différentes versions, je vais montrer le même programme codé différemment, cela me permettra d'avoir un retour visuel afin de pouvoir porter un regard plus critiques sur l'optimisation des différentes façons de faire. J'aurai ainsi les versions suivantes:
+
+* Un modèle de ce que j'essaie d'obtenir sans pointeur (Cette version ne fonctionnera donc pas)
+* Une version utilisant les variables globales
+* Une version dédoublant la fonction _void_ en 2 _int_ afin d'avoir des valeurs _return_
+* Une version utilisant les pointeurs
+
+La dernière version sera en vue de gérer les erreurs éventuelles.
+
 ## Gestion des erreurs
 
 Puisque mon programme demande une entrée à l'utilisateur, il faut s'assurer de plusieurs chose:
